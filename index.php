@@ -64,7 +64,7 @@
 		$unprocessed = is_null( $unprocessed)?0: $unprocessed;
 		sort($unprocessed);
         $response["remaining_cookies"]   = $cookies_count;
-        $response["unfulfilled_orders"]  = is_null( $unprocessed)?0: $unprocessed;
+        $response["unfulfilled_orders"]  = $unprocessed;
     }
    echo  json_encode($response);
 ?>
