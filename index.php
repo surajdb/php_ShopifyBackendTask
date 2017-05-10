@@ -61,10 +61,10 @@
                 $unprocessed[] = $order_key;
             }
         }
+		$unprocessed = is_null( $unprocessed)?0: $unprocessed;
+		sort($unprocessed);
         $response["remaining_cookies"]   = $cookies_count;
         $response["unfulfilled_orders"]  = is_null( $unprocessed)?0: $unprocessed;
     }
-
    echo  json_encode($response);
-
 ?>
